@@ -1068,7 +1068,16 @@ wnck_action_menu_constructor (GType                  type,
                          priv->above_item);
 
   pin_group = NULL;
-
+/*
+ *
+ *      修改点：进行鼠标右键工作区内容屏蔽，注释中内容为原工作区相关内容
+ *      修改：张平
+ *      日期：2020/8/19
+ *      联系方式：zhangpign@kylinos.cn
+ *      详细解释：本此修改注释仅去掉工作区相关内容，开启取消注释即可
+ *
+ *
+ *
   priv->pin_item = make_radio_menu_item (PIN, &pin_group,
                                         _("_Always on Visible Workspace"));
   gtk_menu_shell_append (GTK_MENU_SHELL (menu),
@@ -1105,6 +1114,8 @@ wnck_action_menu_constructor (GType                  type,
 
   priv->workspace_item = gtk_menu_item_new_with_mnemonic (_("Move to Another _Workspace"));
   gtk_widget_show (priv->workspace_item);
+*/
+
 
   submenu = gtk_menu_new ();
   gtk_menu_item_set_submenu (GTK_MENU_ITEM (priv->workspace_item),
